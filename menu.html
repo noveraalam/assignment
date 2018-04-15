@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sandwich menu</title>
+</head>
+<body>
+	<h1 align="center"> Kuratoli Sandwich Shop</h1>
+	<h2 align="center"> Menu Card </h2>
+	<form action="" method="post" >
+		<table align="center" bgcolor="#CCCCCC"  width="90%">
+			<tr>
+				<th  width="50%" align="left">Sandwiches</th>
+				<th  width="5%" align="left">Quantity</th>
+				<th  width="5" align="center">*</th>
+				<th  width="15%" align="left">Unit Price</th>
+				<th  width="5%" align="left">=</th>
+				<th  width="10%" align="left">Totals</th>
+			</tr>
+			<tr>
+				<td>The Classic</td>
+				<td><input id="box1" type="text" size="8" oninput="calculate();" /></td>
+				<td align="center">*</td>
+				 <td>$4.75</td>
+				<td >=</td>
+				<td><input id="result1" size="8" /></td>
+			</tr>
+			<tr>
+				<td>Croissant Sandwich</td>
+				<td><input id="box2" type="text" size="8" oninput="calculate();" /></td>
+				<td align="center">*</td>
+				 <td>$5.50</td>
+				<td >=</td>
+				<td><input id="result2" size="8" /></td>
+			</tr>
+			<tr>
+				<td>Veggie Wrap</td>
+				<td><input id="box3" type="text" size="8" oninput="calculate();" /></td>
+				<td align="center">*</td>
+				 <td>$4.50</td>
+				<td >=</td>
+				<td><input id="result3" size="8" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				 <td></td>
+				<td >SUBTOTAL:</td>
+				<td><input id="result4" size="8" /></td>
+			</tr>
+		</table>
+		<table align="center" bgcolor="#CCCCCC"  width="40%">
+			<tr>
+				<th  align="left">Total Qty.</th>
+				<th  align="center">*</th>
+				<th  align="left">Shipping Rate</th>
+				<th  align="left">=</th>
+				<th  align="left">Shipping Total</th>
+				
+			</tr>
+			<tr>
+				<td><input id="box" type="text" size="8" oninput="calculate();" /></td>
+				<td align="center">*</td>
+				 <td>$10.00</td>
+				<td >=</td>
+				<td><input id="result" size="8" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				 <td></td>
+				<td >ORDER TOTAL :</td>
+				<td><input id="result10" size="8" /></td>
+			</tr>
+	</form>
+</table>
+
+<script type="text/javascript">
+	function calculate() {
+		 var myBox1 = document.getElementById('box1').value; 
+		 var myBox2 = document.getElementById('box2').value; 
+		 var myBox3 = document.getElementById('box3').value; 
+		 var myBox4 = document.getElementById('box').value; 
+        var value1 = 4.75;
+        var value2 = 5.50;
+        var value3 = 4.50;
+        var value4 = 10.00;
+       // var result = document.getElementById('result'); 
+        var myResult1 = myBox1 * value1;
+        var myResult2 = myBox2 * value2;
+        var myResult3 = myBox3 * value3;
+        var myResult5 = myBox4 * value4;
+          var r1=document.getElementById('result1').value = myResult1;
+          var r2=document.getElementById('result2').value = myResult2;
+          var r3=document.getElementById('result3').value = myResult3;
+         
+          var myResult4 = r1+r2+r3;
+          var r4=document.getElementById('result4').value = myResult4;
+          var r5= document.getElementById('result').value = myResult5;
+
+          var myResult10=r4+r5;
+          document.getElementById('result10').value = myResult10;
+
+	}
+</script>
+
+<footer>
+  <p>Posted by: K.hosssain</p>
+  <p>Contact information: <a href="khalidhossain199@gmail.com">ARKO LIGhts</a>.</p>
+</footer>
+
+</body>
+</html>
